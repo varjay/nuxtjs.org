@@ -53,7 +53,7 @@ export default {
     align-items: center;
     @media (min-width: 991px) {
       width: 189px;
-      border-right: 1px solid #dbdfe1;
+      // border-right: 1px solid #dbdfe1;
     }
     &__Text {
       margin: 0;

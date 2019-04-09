@@ -7,7 +7,7 @@
       <nuxt-header-nav-menu/>
     </div>
     <div class="Nav__Lang">
-      <nuxt-header-nav-menu-dropdown :dropdownList="langList" :dropdownLabel="$store.state.lang.iso.toUpperCase()" />
+      <!-- <nuxt-header-nav-menu-dropdown :dropdownList="langList" :dropdownLabel="$store.state.lang.iso.toUpperCase()" /> -->
     </div>
   </nav>
 </template>
@@ -15,7 +15,7 @@
 <script>
 import NuxtHeaderNavSearch from '~/components/HeaderNavSearch.vue'
 import NuxtHeaderNavMenu from '~/components/HeaderNavMenu.vue'
-import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
+// import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
 
 export default {
   computed: {
@@ -35,7 +35,7 @@ export default {
   components: {
     NuxtHeaderNavSearch,
     NuxtHeaderNavMenu,
-    NuxtHeaderNavMenuDropdown
+    // NuxtHeaderNavMenuDropdown
   }
 }
 </script>

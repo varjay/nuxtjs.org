@@ -33,8 +33,26 @@ export default {
   plugins: [
     '~/plugins/init.js',
     { src: '~/plugins/ga.client.js', ssr: false },
-    { src: '~/plugins/adblock.client.js', ssr: false }
+    { src: '~/plugins/adblock.client.js', ssr: false },
+    { src: '@/plugins/element-ui', ssr: true }
   ],
+  build: {
+    vendor: [
+        'element-ui'
+    ],
+    babel: {
+      'plugins': [
+        [
+          'component',
+          {
+            'libraryName': 'element-ui',
+            'styleLibraryName': 'theme-chalk'
+          }
+        ]
+      ],
+      'comments': true
+    },
+  },
   env: {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3',
     docSearchApiKey: 'ff80fbf046ce827f64f06e16f82f1401',
