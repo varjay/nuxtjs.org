@@ -3,12 +3,12 @@
     <div class="img-wrapper"><Blocked alt="Support Nuxt.js" width="125" height="125"/></div>
     <span class="text-wrapper"><strong>Nuxt.js needs you 💚</strong><br>By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and help us financially.</span>
   </div>
-  <carbon-ads v-else-if="displayCarbon"/>
+  <!-- <carbon-ads v-else-if="displayCarbon"/> -->
   <div v-else class="cf_ad" ref="codefundads" id="codefund_ad"></div>
 </template>
 
 <script>
-import CarbonAds from './CarbonAds'
+// import CarbonAds from './CarbonAds'
 export default {
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
     }
   },
   components: {
-    CarbonAds,
+    // CarbonAds,
     Blocked: () => import('~/assets/images/blocked.svg')
   }
 }

@@ -3,8 +3,8 @@
     <s-welcome/>
     <s-why/>
     <s-modes/>
-    <s-codesandbox/>
-    <s-backers/>
+    <!-- <s-codesandbox/>
+    <s-backers/> -->
     <nuxt-footer/>
   </div>
 </template>

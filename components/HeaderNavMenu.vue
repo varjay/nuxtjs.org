@@ -1,26 +1,31 @@
 <template>
   <ul class="Menu">
     <li class="Menu__Item">
+      <nuxt-link class="Menu__Item__Link" to="/licai">
+        {{ $store.state.lang.links.licai }}
+      </nuxt-link>
+    </li>
+    <li class="Menu__Item">
       <nuxt-link class="Menu__Item__Link" to="/guide">
         {{ $store.state.lang.links.guide }}
       </nuxt-link>
     </li>
-    <li class="Menu__Item">
+    <li v-if="0" class="Menu__Item">
       <nuxt-link class="Menu__Item__Link" to="/api">
         {{ $store.state.lang.links.api }}
       </nuxt-link>
     </li>
-    <li class="Menu__Item">
+    <li v-if="0" class="Menu__Item">
       <nuxt-link class="Menu__Item__Link" to="/examples">
         {{ $store.state.lang.links.examples }}
       </nuxt-link>
     </li>
-    <li class="Menu__Item">
+    <li v-if="0" class="Menu__Item">
       <nuxt-link class="Menu__Item__Link" to="/faq">
         {{ $store.state.lang.links.faq }}
       </nuxt-link>
     </li>
-    <li class="Menu__Item">
+    <li v-if="0" class="Menu__Item">
       <nuxt-header-nav-menu-dropdown :dropdownList="dropdownList" :dropdownLabel="$store.state.lang.links.ecosystem" />
     </li>
   </ul>

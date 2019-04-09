@@ -1,52 +1,24 @@
 <template>
   <nav class="Affix" :class="{'Affix--hidden': !visible}">
-    <h2 class="Affix__Version">
+    <!-- <h2 class="Affix__Version">
       {{ $store.state.lang.text.version }} {{ $store.state.docVersion }}
       <div class="Affix__Version__Toggler" @click="toggle">
         <div class="icon close"></div>
       </div>
-    </h2>
+    </h2> -->
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
       <div class="icon more-vertical"></div>
     </div>
-    <a class="Affix__Support" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
+    <!-- <a class="Affix__Support" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
       <span>{{ $store.state.lang.links.official_support }}</span>
-    </a>
-    <h3 class="Affix__Title" style="margin-bottom: 15px;">{{ $store.state.lang.sponsors.title }}</h3>
-    <ul class="Affix__List">
+    </a> -->
+    <!-- 赞助商 -->
+    <h3 v-if="0" class="Affix__Title" style="margin-bottom: 15px;">{{ $store.state.lang.sponsors.title }}</h3>
+    <ul v-if="0" class="Affix__List">
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
           <img src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" style="height: 32px" alt="Tipe.io" />
         </a>
-      </li>
-      <li class="Affix__List__Item">
-        <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/storyblok-logo.svg" alt="Storyblok.com" style="height: 36px"/>
-        </a>
-      </li>
-      <li class="Affix__List__Item">
-        <a class="Affix__List__Item__Sponsor" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 28px">
-        </a>
-      </li>
-      <li class="Affix__List__Item">
-        <a class="Affix__List__Item__Sponsor" href="https://yakaz.com/" target="_blank" rel="noopener">
-          <img src="/yakaz-partner.png" srcset="/yakaz-partner-2x.png 2x" alt="Yakaz.com" style="height: 28px;">
-        </a>
-      </li>
-      <li class="Affix__List__Item">
-        <a class="Affix__List__Item__Sponsor" href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective" target="_blank" rel="noopener">
-          <img src="/vueschool.png" srcset="/vueschool-2x.png 2x" alt="VueSchool.io" style="height: 28px">
-        </a>
-      </li>
-      <li class="Affix__List__Item">
-        <a class="Affix__List__Item__Sponsor" href="https://shipshape.io/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/shipshape-logo.svg" alt="Shipshape.io" style="height: 36px"/>
-        </a>
-      </li>
-      <li class="Affix__List__Item">
-        {{ $store.state.lang.sponsors.become }}
-        <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
       </li>
     </ul>
     <template v-for="(group, index) in list">

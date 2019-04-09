@@ -56,7 +56,7 @@ export default {
     interval: 100,
     routes() {
       return Promise.all(
-        ['guide', 'api', 'examples', 'faq']
+        ['licai', 'guide', 'api', 'examples', 'faq']
           .map((category) => {
             return axios.get(`https://docs.api.nuxtjs.org/menu/${locale}/${category}`)
               .then((res) => res.data || [])
