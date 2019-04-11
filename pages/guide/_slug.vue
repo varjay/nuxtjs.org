@@ -1,6 +1,6 @@
 <template>
   <div>
-    <code-fund-ads :key="$route.params.slug"/>
+    <!-- <code-fund-ads :key="$route.params.slug"/> -->
     <h1>{{ attrs.title }}</h1>
     <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
     <html-parser :content="body"/>
@@ -11,7 +11,7 @@
 <script>
 import axios from 'axios'
 import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
-import CodeFundAds from '~/components/CodeFundAds.vue'
+// import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
@@ -58,7 +58,7 @@ export default {
   },
   components: {
     ResponsiveVideo,
-    CodeFundAds,
+    // CodeFundAds,
     HtmlParser,
     Contribute
   }

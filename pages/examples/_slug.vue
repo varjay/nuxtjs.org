@@ -1,6 +1,6 @@
 <template>
   <div>
-    <code-fund-ads :key="$route.params.slug" />
+    <!-- <code-fund-ads :key="$route.params.slug" /> -->
     <h1>{{ attrs.title }}</h1>
     <blockquote>
       <p>{{ attrs.description }}</p>
@@ -33,7 +33,7 @@
 import axios from 'axios'
 import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 import CodeSandbox from '~/components/CodeSandbox.vue'
-import CodeFundAds from '~/components/CodeFundAds.vue'
+// import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 
 export default {
@@ -96,7 +96,7 @@ export default {
   components: {
     ResponsiveVideo,
     CodeSandbox,
-    CodeFundAds,
+    // CodeFundAds,
     HtmlParser
   }
 }

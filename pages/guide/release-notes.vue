@@ -1,6 +1,6 @@
 <template>
   <div>
-    <code-fund-ads v-if="!isDev && $store.state.locale === ' en '" :key="$route.params.slug" />
+    <!-- <code-fund-ads v-if="!isDev && $store.state.locale === ' en '" :key="$route.params.slug" /> -->
     <h1>{{ $store.state.lang.guide.release_notes }}</h1>
     <div v-for="release in releases" :key="release.name">
       <h2 :id="release.name">
@@ -17,7 +17,7 @@
 
 <script>
 import axios from 'axios'
-import CodeFundAds from '~/components/CodeFundAds.vue'
+// import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 const monthNames = [
   'January', 'February', 'March',
@@ -59,7 +59,7 @@ export default {
     }
   },
   components: {
-    CodeFundAds,
+    // CodeFundAds,
     HtmlParser
   }
 }

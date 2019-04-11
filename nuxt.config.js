@@ -4,6 +4,10 @@ import _ from 'lodash'
 const locale = process.env.NUXT_LOCALE || 'en'
 
 export default {
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
   modern: 'client',
   head: {
     meta: [

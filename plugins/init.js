@@ -6,7 +6,7 @@ export default async function ({ isDev, env, req, store: { commit, state }, redi
     return
   }
   if (isDev) {
-    commit('setApiURI', 'http://localhost:4000')
+    commit('setApiURI', 'http://0.0.0.0:4000')
   }
   // If SSR
   if (req) {
