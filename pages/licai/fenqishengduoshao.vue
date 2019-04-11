@@ -55,11 +55,12 @@ export default {
   },
   methods: {
     getResult() {
+      this.result = []
       let money = (this.money / this.month).toFixed(2)
       let frugally = 0
       for (let i = 0; i < this.month; i++) {
         let blance = (this.money - money * i).toFixed(2)
-        let income = (blance * 0.003).toFixed(2)
+        let income = (blance * (this.income / 1000)).toFixed(2)
         frugally += 1 * income
         this.result.push({
           month: i + 1,
@@ -71,7 +72,7 @@ export default {
       this.result.push({
         money: '',
         blance: '',
-        income: `省：${frugally}元`,
+        income: `省：${frugally.toFixed(2)}元`,
       })
     },
   },
