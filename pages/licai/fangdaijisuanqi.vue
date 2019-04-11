@@ -1,14 +1,14 @@
 <template>
-  <div class="tiqianhuanshengduoshao">
-    <el-form ref="form" :model="form" label-width="180px">
+  <div class="fangdaijisuanqi">
+    <el-form ref="form" :model="form" label-width="100%">
       <el-form-item label="还款方式">
         <el-radio-group v-model="type">
           <el-radio-button label="等额本息" />
           <el-radio-button label="等额本金" />
         </el-radio-group>
       </el-form-item>
-      <el-form-item label="分期时间（年）">
-        <el-slider style="width: 280px;" v-model="year" :min="1" :max="30" show-input />
+      <el-form-item :label="`分期时间（${year}年）`">
+        <el-slider v-model="year" :min="1" :max="30" />
       </el-form-item>
       <el-form-item label="贷款总额">
         <el-input class="elinput" v-model="money" placeholder="请输入内容"></el-input>
@@ -42,7 +42,7 @@
     <br>
     <el-table
       :data="result"
-      style="width: 100%">
+      style="width: 681px;">
       <el-table-column
         prop="month"
         label="月份"
@@ -153,10 +153,19 @@ export default {
 }
 </script>
 <style lang="scss">
-.tiqianhuanshengduoshao {
+.fangdaijisuanqi {
+  .el-form {
+    max-width: 800px;
+  }
+  .el-form-item__label {
+    width: 140px !important;
+  }
+  .el-form-item__content {
+    margin-left: 140px !important;
+  }
   .elinput {
     input {
-      width: 180px;
+      width: 100%;
     }
   }
   .result {

@@ -12,7 +12,14 @@ export default {
   head: {
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      { name: 'viewport', content: 'width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui' },
+      { name: 'apple-touch-fullscreen', content: 'yes'},
+      { name: 'screen-orientation', content: 'portrait'},
+      { name: 'x5-orientation', content: 'portrait'},
+      { name: 'x5-fullscreen', content: 'true'},
+      { name: 'x5-page-mode', content: 'app'},
+      { name: 'full-screen', content: 'yes'},
+      { name: 'browsermode', content: 'application'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

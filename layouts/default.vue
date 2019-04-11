@@ -19,6 +19,20 @@ export default {
   computed: {
     visible() { return this.$store.state.visibleHeader }
   },
+  mounted() {
+    let clientWidth = document.body.clientWidth
+    let rem = 0
+    if (clientWidth > 600) {
+      rem = Math.sqrt((clientWidth/16 - 20) * 0.9) + 20
+    } else {
+      rem = clientWidth / 16
+    }
+    let em = Math.sqrt((clientWidth/16 - 20) * 0.9) + 20
+    window.offsetTop = em * 2.55556 * 0.9
+
+    document.querySelector('html').style.fontSize = rem + 'px'
+    document.body.style.fontSize = em + 'px'
+  },
   methods: {
     setStore() {
       if (this.$store.state.visibleHeader) this.$store.commit('toggle', 'visibleHeader')
